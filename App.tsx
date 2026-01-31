@@ -1,6 +1,5 @@
 import React from 'react';
 import { Card } from './components/Card';
-import { Profile } from './components/Profile';
 import { Stack } from './components/Stack';
 import { ExperienceList } from './components/ExperienceList';
 import { Projects } from './components/Projects';
@@ -24,37 +23,32 @@ export default function App() {
         {/* Bento Grid Layout - 2 Columns */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 auto-rows-[minmax(180px,auto)]">
           
-          {/* 1. Profile - Full Width */}
-          <Card className="md:col-span-2 min-h-[300px]" delay={0.1}>
-            <Profile />
-          </Card>
-
-          {/* Test Box - Full Width with noPadding for immersive effect */}
+          {/* 1. Header / Planet Profile - Full Width */}
           <Card className="md:col-span-2" delay={0.15} noPadding>
             <TestBox />
           </Card>
 
-          {/* 2. Experience - Full Width (Moved under Profile) */}
+          {/* 2. Experience - Full Width */}
           <Card className="md:col-span-2" delay={0.2}>
             <ExperienceList />
           </Card>
 
-          {/* 3. Services - Right Column (Now Left) */}
+          {/* 3. Services - Left Column */}
           <Card className="md:col-span-1" delay={0.3}>
             <Services />
           </Card>
 
-          {/* 4. Socials - Left Column (Now Right) */}
+          {/* 4. Socials - Right Column */}
           <Card className="md:col-span-1" delay={0.3}>
             <Socials />
           </Card>
 
-          {/* 5. Stack - Full Width (Adjusted to fill space) */}
+          {/* 5. Stack - Full Width */}
           <Card className="md:col-span-2" delay={0.4}>
             <Stack />
           </Card>
 
-          {/* 6. Education - Full Width (Added) */}
+          {/* 6. Education - Full Width */}
           <Card className="md:col-span-2" delay={0.45}>
             <Education />
           </Card>
